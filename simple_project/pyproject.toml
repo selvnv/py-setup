@@ -1,0 +1,26 @@
+[project]
+name = "simple-project"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "flask>=3.1.0",
+]
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.1.0",
+    "ruff>=0.9.7",
+]
+
+[tool.ruff]
+exclude = [".venv"]
+
+[tool.ruff.lint]
+extend-select = [
+  "D",   # pydocstyle
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
